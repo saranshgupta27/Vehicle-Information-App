@@ -6,7 +6,7 @@ console.log(a);
 
 
 function get_output(a) {
-  fetch(`http://shrouded-falls-48764.herokuapp.com/vehicle-info/${a}`, {
+  fetch(`https://shrouded-falls-48764.herokuapp.com/vehicle-info/${a}`, {
     method: "GET",
     headers: {
       "API-Key": "80ea7721dd2f4a81b255d61016655732",
