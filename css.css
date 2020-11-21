@@ -15,7 +15,9 @@ html {
   overflow: hidden;
   /* padding: 0 5% 0 5%; */
 }
-
+.animate__fadeInRight{
+  animation-duration: 0.80s;
+}
 .parent {
   width: 90vw;
   height: 90vh;
@@ -30,7 +32,7 @@ html {
 #heading {
   border-bottom: 3px solid #e8505b;
   /* text-align: right; */
-
+animation-duration: 0.75s;
   font-size: 2.8em;
   font-weight: 600;
   color: #707070;

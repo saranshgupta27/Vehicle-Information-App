@@ -1,7 +1,7 @@
 let hehe= window.location.href;
 a=hehe.split('?')[1].split('=')[1];
 
-console.log(a);
+
 
 
 
@@ -12,12 +12,15 @@ function get_output(a) {
       "API-Key": "80ea7721dd2f4a81b255d61016655732",
     },
   })
-    .then((data) => {
+    .then((error,response,data) => {
+      
+      console.log(response.status);
       return data.json();
+
     })
     .then((final) => {
       mainf(final);
-    //   console.log(final);
+      
     });
 
   const mainf = function (y) {
@@ -30,7 +33,6 @@ function get_output(a) {
 }
 function set_html(y) {
   let b = document.querySelectorAll(".lb");
-  console.log(b);
   document.querySelector('.div4').style.display='none';
 document.querySelector('.div3').style.display='flex';
   
@@ -44,7 +46,6 @@ document.querySelector('.div3').style.display='flex';
   b[7].textContent = y["Chassis Number"];
   b[8].textContent = y["Registering Authority"];
   let d=a.split('%20');
-  console.log(d);
 d=`${d[0]} ${d[1]} ${d[2]} ${d[3]}`;
   document.querySelector('#np').textContent=`${d.toUpperCase()}`;
 

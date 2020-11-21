@@ -8,12 +8,9 @@ function send() {
 let counter = 0;
 
 document.querySelector("#t1").addEventListener("keyup", function (e) {
-    let up=true;
-    if(e.keyCode=='8')
-  {
-      up=false;
-  }
-  else{ 
+    console.log(isNaN(e.target.value[7]));
+    
+  if(e.keyCode!=8){ 
     if (e.target.value.length == "2" ) {
      
     e.target.value = e.target.value + " ";
@@ -21,8 +18,13 @@ document.querySelector("#t1").addEventListener("keyup", function (e) {
   if (e.target.value.length == "5") {
     e.target.value = e.target.value + " ";
   }
-  if (e.target.value.length == "8") {
+  if(e.target.value.length == "8" && isNaN(e.target.value[7]) )
+  {
     e.target.value = e.target.value + " ";
+    
+  }
+  else if (e.target.value.length == "8" && e.target.value[7]!=undefined) {
+    e.target.value = e.target.value.substr(0,7) + " "+e.target.value[7];
   }
 }
 });
