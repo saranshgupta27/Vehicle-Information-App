@@ -16,10 +16,7 @@ html {
   overflow: hidden;
   /* padding: 0 5% 0 5%; */
 }
-body
-{
-  min-height: 100vh;
-}
+
 .animate__fadeInRight{
   animation-duration: 0.80s;
 }

@@ -12,9 +12,8 @@ function get_output(a) {
       "API-Key": "80ea7721dd2f4a81b255d61016655732",
     },
   })
-    .then((error,response,data) => {
+    .then((data) => {
       
-      console.log(response.status);
       return data.json();
 
     })
