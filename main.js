@@ -3,7 +3,7 @@ function send() {
   let no = document.querySelector("#t1").value;
   console.log(no);
   document.querySelector(".parent").classList.add("animate__fadeOut");
-  setTimeout(function(){ window.location.href = `page2.html?name=${no}`;; }, 1000);
+  setTimeout(function(){ window.location.href = `page2.html?name=${no}`;; }, 500);
   
 }
 

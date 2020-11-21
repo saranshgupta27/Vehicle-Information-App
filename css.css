@@ -23,6 +23,7 @@ html {
 .parent {
   width: 90vw;
   height: 90vh;
+  
   margin: 0 auto auto auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -49,6 +50,7 @@ animation-duration: 0.75s;
 #d12 {
   width: 45%;
   height: 100%;
+  
   display: flex;
 
   justify-content: center;
@@ -323,8 +325,35 @@ width: auto;
   }
 
 }
+@media (max-height: 550px){
+html{
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+  min-height: 550px;
+  overflow: hidden;
+}
+  .div1{
+  min-height: 72px;
+ 
+}
+.div2{
+  min-height: 132px;
+  
+}
+.div3{
+  min-height: 80px;
+  
+}
+.div4{
+  min-height: 230px;
+  overflow: hidden;
+ 
+}
+
+#h1-2{
+  font-size: 1.1em;
+  visibility: hidden;
+}
+#p1{
+  font-size: 1.2em;
+}
+}
