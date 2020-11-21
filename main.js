@@ -2,12 +2,14 @@ let data = document.querySelector("#t1");
 function send() {
   let no = document.querySelector("#t1").value;
   console.log(no);
-  window.location.href = `page2.html?name=${no}`;
+  document.querySelector(".parent").classList.add("animate__fadeOut");
+  setTimeout(function(){ window.location.href = `page2.html?name=${no}`;; }, 1000);
+  
 }
 
 let counter = 0;
 
-document.querySelector("#t1").addEventListener("keyup", function (e) {
+document.querySelector("#t1").addEventListener("keypress", function (e) {
     console.log(isNaN(e.target.value[7]));
     
   if(e.keyCode!=8){ 
