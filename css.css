@@ -350,10 +350,20 @@ html{
 }
 
 #h1-2{
-  font-size: 1.1em;
-  visibility: hidden;
+  display:none;
 }
 #p1{
   font-size: 1.2em;
+}
+}
+
+@media (max-height: 320px){
+  .div1{
+    display:none;
+  }
+
+  .div2{
+    min-height: 132px;
+  margin-top: -50px;
 }
 }
