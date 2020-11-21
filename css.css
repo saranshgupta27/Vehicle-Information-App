@@ -197,8 +197,9 @@ html {
   text-align: right;
   float: right;
   position: relative;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1px;
+  right: 2px;
+  
 }
 
 @media (max-width: 1424px) {

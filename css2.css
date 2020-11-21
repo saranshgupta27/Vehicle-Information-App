@@ -70,14 +70,16 @@ html {
 .div3 {
   grid-area: 6 / 1 / 10/ 8;
   display: none;
-  width: 100%;
+  width: 95%;
   height: 80%;
   flex-wrap:  wrap;
 align-items: baseline;
 justify-content: space-around;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .div4 {
   top: 75%;
@@ -189,7 +191,7 @@ justify-content: space-around;
     grid-area: 2 / 1 / 5 / 8;
   }
   .div3{
-
+    width: 100%;
     margin-bottom: 90px;
     margin-left: 0;
   }
@@ -277,13 +279,13 @@ justify-content: space-around;
   margin-top: 20px;
 }
 }
-@media (max-width: 380px) {
+@media (max-width: 420px) {
   .div3{
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 0;
   }
   .img-t{
-    width: 24%;
+    width: 40%;
   }
   .lb {
     font-size: 0.6em;
