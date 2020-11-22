@@ -3,7 +3,7 @@ a=hehe.split('?')[1].split('=')[1].split('+');
 
 a=`${a[0]} ${a[1]} ${a[2]} ${a[3]}`;
 
-// let a='DL11SK4523';
+// let a='DLK23';
 
 function get_output(a) {
   fetch(`https://shrouded-falls-48764.herokuapp.com/vehicle-info/${a}`, {
@@ -15,7 +15,7 @@ function get_output(a) {
   .then(response => {
 
     if(response.status != '200'){
-      handleErrors();
+      handleErrors(response.status);
       return 0;
     }
     return response.json();
@@ -33,6 +33,18 @@ function get_output(a) {
     let v = y[x[0]];
     set_html(y);
   };
+}
+
+const handleErrors = () => {
+  console.log('ERROR');
+  document.querySelector('.div4').style.display='none';
+  document.querySelector('.div3').style.display='none';
+  
+  document.querySelector('.div5').style.display='flex';
+
+
+
+
 }
 function set_html(y) {
   let b = document.querySelectorAll(".lb");
@@ -53,8 +65,6 @@ function set_html(y) {
 
 }
 
-const handleErrors = () => {
-  console.log('ERROR');
-}
+
 
 get_output(a);

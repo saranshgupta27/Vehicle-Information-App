@@ -20,6 +20,9 @@ html {
 .animate__fadeInRight{
   animation-duration: 0.80s;
 }
+.animate__fadeOut{
+  animation-duration: 1s;
+}
 .parent {
   width: 90vw;
   height: 90vh;

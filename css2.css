@@ -195,7 +195,10 @@ justify-content: space-around;
     margin-bottom: 90px;
     margin-left: 0;
   }
-
+  #error{
+    font-size: 1.2em !important;
+    
+  }
   .lb {
     font-size: 0.8em;
   
@@ -291,7 +294,7 @@ justify-content: space-around;
     font-size: 0.6em;
   
   }
- 
+  
   .img-caption {
     font-size: 0.6em;
   }
@@ -301,3 +304,21 @@ a{
   text-decoration: none;
 }
 
+.div5{
+  display:none;
+  width: 100%;
+  grid-area: 5 / 1 / 10 / 8;
+  align-items: center;
+  justify-content:center
+  
+}
+
+#error{
+  font-size: 2em;
+  text-align: center;
+  width: 80%;
+}
+#error>a{
+  text-decoration: underline;
+  color: #e8505b;
+}
