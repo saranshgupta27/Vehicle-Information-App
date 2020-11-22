@@ -11,46 +11,32 @@ let ok = "D";
 let nk = "D";
 let i = 0;
 document.querySelector("#t1").addEventListener("keydown", function (e) {
+
   setTimeout(function(){ 
-  //   temp=e.target.value;
-  //   console.log(temp.length);
-  //   i=0;j=0;
-  //   while(i<temp.length)
-  // {
-  //   j=i+1;
-  //   if (isNaN(temp[i]) && !isNaN(temp[j]) )
-  //   {
-      
-  //       // if(temp[j]=='')
-  //       // {
-  //       //   j=j+1
-  //       // }
-  //       swap=temp[j];
-  //       temp[j]=' ';
-  //       temp[j+1]=swap;
-  //       break;
-  //     }
-  //     else 
-  //     { continue};
+       
   
-  //   }i++;
-  if (i < 13) 
-      {
-        nk = e.key;
-        console.log(ok, nk);
-        if (isNaN(nk) != isNaN(ok)) 
-        {
-          console.log("inside");
-          e.target.value =e.target.value.substr(0, i)+" ";
-        
-          i++;
-        }
-        ok = nk;
-      }
-      i++;
-      ok = nk;
+    if (e.target.value.length == "2" ) {
+     
+    e.target.value = e.target.value + " ";
+  }
+  if (e.target.value.length == "5") {
+    e.target.value = e.target.value + " ";
+  }
+  if(e.target.value.length == "8" && isNaN(e.target.value[7]) )
+  {
+    e.target.value = e.target.value + " ";
     
-   }, 500);
+  }
+  else if (e.target.value.length == "8" && e.target.value[7]!=undefined) {
+    e.target.value = e.target.value.substr(0,7) + " "+e.target.value[7];
+  }
+    
+  
+  
+  
+  
+  }, 300);
+    
   
 });
   
