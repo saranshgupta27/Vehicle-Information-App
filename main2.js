@@ -55,10 +55,10 @@ function set_html(y) {
   b[1].textContent = y["Fitness Upto"];
   b[2].textContent = y["Fuel Type"];
   b[3].textContent = y["Model"];
-  b[4].textContent = y["Reg Date"];
-  b[5].textContent = y["Insurance expiry"];
-  b[6].textContent = y["Engine Number"];
-  b[7].textContent = y["Chassis Number"];
+  b[4].textContent = y["Insurance expiry"];
+  b[5].textContent = y["Engine Number"];
+  b[6].textContent = y["Chassis Number"];
+  b[7].textContent = y["Reg Date"];
   b[8].textContent = y["Registering Authority"];
 
   document.querySelector('#np').textContent=`${a}`;
