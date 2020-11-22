@@ -11,7 +11,8 @@ let ok = "D";
 let nk = "D";
 let i = 0;
 document.querySelector("#t1").addEventListener("keydown", function (e) {
-  if (e.keyCode != 8) {
+  
+  if (e.key.toUpperCase()!= 'backspace') {
     if (i < 13) 
     {
       nk = e.key;
