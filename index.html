@@ -26,9 +26,12 @@
             <div class="div3 animate__animated animate__fadeInRight" > 
                 <h1 id=h1-2>Enter Vehicle Registration Number</h1>
                 <div id=tb>
-                    <div id=d1><input type="text" placeholder="MH 14 DH 56XX" id=t1 ></div>
+                    <form onsubmit="send()" action="page2.html" method="get">
+            <div id=d1>
+                <input type="text" oninput="this.value = this.value.toUpperCase()" placeholder="MH 14 DH 56XX" name="name" maxlength="14" id=t1 pattern="^[A-Z]{2}\s[0-9]{1,2}\s[A-Z]{1,3}\s[0-9]{4}$"></div>
                     
-               <div id=d2><button type="submit" id=b1 onclick="send()">GO</button></div>
+               <div id=d2><button type="submit" id=b1 value="submit" >GO</button></div>
+               </form>
             </div>
 
             </div>

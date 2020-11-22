@@ -1,9 +1,10 @@
 let hehe= window.location.href;
-a=hehe.split('?')[1].split('=')[1];
+a=hehe.split('?')[1].split('=')[1].split('+');
 
+a=`${a[0]} ${a[1]} ${a[2]} ${a[3]}`;
+console.log(a);
 
-
-
+// let a='DL11SK4523';
 
 function get_output(a) {
   fetch(`https://shrouded-falls-48764.herokuapp.com/vehicle-info/${a}`, {
@@ -44,9 +45,8 @@ document.querySelector('.div3').style.display='flex';
   b[6].textContent = y["Engine Number"];
   b[7].textContent = y["Chassis Number"];
   b[8].textContent = y["Registering Authority"];
-  let d=a.split('%20');
-d=`${d[0]} ${d[1]} ${d[2]} ${d[3]}`;
-  document.querySelector('#np').textContent=`${d.toUpperCase()}`;
+
+  document.querySelector('#np').textContent=`${a}`;
 
 }
 get_output(a);
