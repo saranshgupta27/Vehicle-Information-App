@@ -2,7 +2,6 @@ let hehe= window.location.href;
 a=hehe.split('?')[1].split('=')[1].split('+');
 
 a=`${a[0]} ${a[1]} ${a[2]} ${a[3]}`;
-console.log(a);
 
 // let a='DL11SK4523';
 
@@ -13,28 +12,32 @@ function get_output(a) {
       "API-Key": "80ea7721dd2f4a81b255d61016655732",
     },
   })
-    .then((data) => {
-      
-      return data.json();
+  .then(response => {
 
-    })
-    .then((final) => {
-      mainf(final);
-      
-    });
+    if(response.status != '200'){
+      handleErrors();
+      return 0;
+    }
+    return response.json();
+  })
+  .then(data => {
+    if(data)
+      mainf(data);
+  })
+  .catch(err => {
+    console.log(err);
+  });
 
   const mainf = function (y) {
     let x = Object.keys(y);
     let v = y[x[0]];
-
-    // console.log(v);
     set_html(y);
   };
 }
 function set_html(y) {
   let b = document.querySelectorAll(".lb");
   document.querySelector('.div4').style.display='none';
-document.querySelector('.div3').style.display='flex';
+  document.querySelector('.div3').style.display='flex';
   
   b[0].textContent = y["Owner Name"];
   b[1].textContent = y["Fitness Upto"];
@@ -49,4 +52,9 @@ document.querySelector('.div3').style.display='flex';
   document.querySelector('#np').textContent=`${a}`;
 
 }
+
+const handleErrors = () => {
+  console.log('ERROR');
+}
+
 get_output(a);
