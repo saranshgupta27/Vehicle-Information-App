@@ -10,17 +10,17 @@ function send() {
 
 
 document.querySelector("#t1").addEventListener("keydown", function (e) {
-
+  console.log(e.target.value.length);
+    console.log(e.key);
+  // if(e.target.value[e.target.value.length-1]== ' ')
+  // {
+  //   e.target.value = e.target.value.substr(0,e.target.value.length-1);
+  // }
+  
+  // else{
   setTimeout(function(){ 
        
-    console.log(e.target.value.length);
-    console.log(e.key);
-
-if(e.key==' ')
-{
-  e.target.value = e.target.value.substr(0,e.target.value.length-1);
-}
-else{
+    
     if (e.target.value.length == "2" ) {
      
     e.target.value = e.target.value + " ";
@@ -46,7 +46,7 @@ else{
     e.target.value=  e.target.value.substr(0,e.target.value.length-1) + " "+`${swap}`;
 
   }
-}
+// }
 }, 90);
     
   
