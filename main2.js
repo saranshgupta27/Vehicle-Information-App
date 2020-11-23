@@ -4,7 +4,7 @@ a=hehe.split('?')[1].split('=')[1].split('+');
 a=`${a[0]} ${a[1]} ${a[2]} ${a[3]}`;
 
 // let a='DLK23';
-
+document.querySelector('#np').textContent=`${a}`;
 function get_output(a) {
   fetch(`https://shrouded-falls-48764.herokuapp.com/vehicle-info/${a}`, {
     method: "GET",
@@ -13,7 +13,7 @@ function get_output(a) {
     },
   })
   .then(response => {
-
+    
     if(response.status != '200'){
       handleErrors(response.status);
       return 0;
@@ -31,6 +31,7 @@ function get_output(a) {
   const mainf = function (y) {
     let x = Object.keys(y);
     let v = y[x[0]];
+    
     set_html(y);
   };
 }
@@ -61,7 +62,7 @@ function set_html(y) {
   b[7].textContent = y["Reg Date"];
   b[8].textContent = y["Registering Authority"];
 
-  document.querySelector('#np').textContent=`${a}`;
+  
 
 }
 

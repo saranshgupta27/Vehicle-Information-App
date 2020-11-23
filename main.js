@@ -14,6 +14,13 @@ document.querySelector("#t1").addEventListener("keydown", function (e) {
   setTimeout(function(){ 
        
     console.log(e.target.value.length);
+    console.log(e.key);
+
+if(e.key==' ')
+{
+  e.target.value = e.target.value.substr(0,e.target.value.length-1);
+}
+else{
     if (e.target.value.length == "2" ) {
      
     e.target.value = e.target.value + " ";
@@ -27,7 +34,9 @@ document.querySelector("#t1").addEventListener("keydown", function (e) {
     e.target.value = e.target.value + " ";
     
   }
-   
+   if(e.target.value.length=="7" && !isNaN(e.key)){
+    e.target.value = e.target.value.substr(0,6) + " "+e.target.value[6];
+   }
   if(e.target.value.length >6 && !isNaN(e.target.value[e.target.value.length-1])  && e.target.value[e.target.value.length-1]!=' ' && isNaN(e.target.value[e.target.value.length-2]))
   { 
    console.log('length'+e.target.value.length);
@@ -37,7 +46,7 @@ document.querySelector("#t1").addEventListener("keydown", function (e) {
     e.target.value=  e.target.value.substr(0,e.target.value.length-1) + " "+`${swap}`;
 
   }
-
+}
 }, 90);
     
   
