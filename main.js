@@ -8,18 +8,11 @@ function send() {
 
 
 
-
+let size=0;
 document.querySelector("#t1").addEventListener("keydown", function (e) {
-  console.log(e.target.value.length);
-    console.log(e.key);
-  // if(e.target.value[e.target.value.length-1]== ' ')
-  // {
-  //   e.target.value = e.target.value.substr(0,e.target.value.length-1);
-  // }
+setTimeout(function(){ 
   
-  // else{
-  setTimeout(function(){ 
-       
+  if(e.target.value.length >=size ){   
     
     if (e.target.value.length == "2" ) {
      
@@ -46,9 +39,9 @@ document.querySelector("#t1").addEventListener("keydown", function (e) {
     e.target.value=  e.target.value.substr(0,e.target.value.length-1) + " "+`${swap}`;
 
   }
-// }
-}, 90);
+ } size=e.target.value.length;
+}, 90); 
     
-  
+
 });
   
