@@ -34,7 +34,7 @@ document.querySelector("#t1").addEventListener("keydown", function (e) {
     e.target.value = e.target.value + " ";
     
   }
-   if(e.target.value.length=="7" && !isNaN(e.target.value[e.target.value.length-1])){
+   if(e.target.value.length=="7" && e.target.value[e.target.value.length-1]== ' '){
     e.target.value = e.target.value.substr(0,6) + " "+e.target.value[6];
    }
   if(e.target.value.length >6 && !isNaN(e.target.value[e.target.value.length-1])  && e.target.value[e.target.value.length-1]!=' ' && isNaN(e.target.value[e.target.value.length-2]))
