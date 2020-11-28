@@ -40,7 +40,7 @@ setTimeout(function(){
 
   }
  } size=e.target.value.length;
-},5); 
+},90); 
     
 
 });
