@@ -10,6 +10,7 @@ function send() {
 
 let size=0;
 document.querySelector("#t1").addEventListener("keydown", function (e) {
+
 setTimeout(function(){ 
   
   if(e.target.value.length >=size ){   
