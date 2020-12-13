@@ -1,10 +1,10 @@
 let hehe= window.location.href;
-a=hehe.split('?')[1].split('=')[1].split('+');
+a=hehe.toUpperCase().split('?')[1].split('=')[1].split('-');
 
 a=`${a[0]} ${a[1]} ${a[2]} ${a[3]}`;
 
 // let a='DLK23';
-document.querySelector('#np').textContent=`${a}`;
+document.querySelector('#np').textContent=`${a.replace(/ /g, "-")}`;
 function get_output(a) {
   fetch(`https://shrouded-falls-48764.herokuapp.com/vehicle-info/${a}`, {
     method: "GET",
