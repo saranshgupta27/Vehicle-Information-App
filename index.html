@@ -26,7 +26,7 @@
                 <div id=tb>
                 <form id='submitform' onsubmit="send()" action="page2.html" method="get" >
                     <div id=d1>
-                        <input type="text" placeholder="MH 14 DH 56XX" name="name" maxlength="14" id="t1" required>
+                        <input type="text" placeholder="MH 14 DH 56XX" pattern="^[A-Za-z]{2}[ -]*[0-9]{1,2}(?:[ -]*[A-Za-z])?(?:[ -]?[A-Za-z]{0,2})?[ -]*[0-9]{4}$" name="name" maxlength="14" id="t1" required>
                     </div>   
                     <div id=d2><button type="submit" id=b1 value="submit" >GO</button></div>
                 </form>
