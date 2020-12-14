@@ -1,7 +1,5 @@
-let hehe= window.location.href;
-a=hehe.toUpperCase().split('?')[1].split('=')[1].split('+');
-
-a=`${a[0]} ${a[1]} ${a[2]} ${a[3]}`;
+let hehe= new URL(window.location.href);
+a = hehe.searchParams.get("name").toUpperCase()
 
 // let a='DLK23';
 document.querySelector('#np').textContent=`${a}`;
