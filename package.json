@@ -1,0 +1,14 @@
+{
+  "name": "vehicle-details",
+  "version": "1.0.0",
+  "description": "SITE IS LIVE AT:\r https://saranshgupta27.github.io/Vehicle-Information-App/",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.15.0"
+  }
+}

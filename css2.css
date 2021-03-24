@@ -30,11 +30,11 @@ html {
   border-bottom: 3px solid #e8505b;
   font-size: 2.4em;
   font-weight: 600;
-  color: #707070 ;
+  color: #707070;
   margin-top: 40px;
   text-align: center;
 }
-#heading:hover{
+#heading:hover {
   color: rgb(0, 0, 0);
 }
 
@@ -72,14 +72,13 @@ html {
   display: none;
   width: 95%;
   height: 80%;
-  flex-wrap:  wrap;
-align-items: baseline;
-justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
-
 }
 .div4 {
   top: 75%;
@@ -150,7 +149,7 @@ justify-content: space-around;
   display: flex;
   flex-direction: row;
   width: 30%;
-  
+
   margin: 2px auto;
 }
 .divic {
@@ -179,7 +178,6 @@ justify-content: space-around;
 }
 
 #np {
-
   color: #707070;
   font-weight: 500;
 }
@@ -190,48 +188,38 @@ justify-content: space-around;
   .div2 {
     grid-area: 2 / 1 / 5 / 8;
   }
-  .div3{
+  .div3 {
     width: 100%;
     margin-bottom: 90px;
     margin-left: 0;
   }
-  #error{
+  #error {
     font-size: 1.2em !important;
-    
   }
   .lb {
     font-size: 0.8em;
-  
   }
- 
+
   .img-caption {
     font-size: 1em;
   }
 }
 @media (max-width: 797px) {
-  
-
   .lb {
-    font-size: 0.em;
-  
+    font-size: 0em;
   }
- 
+
   .img-caption {
     font-size: 0.9em;
   }
 }
 @media (max-width: 663px) {
-
   .grid-img {
     max-width: 30px;
-    
-
   }
   .lb {
     font-size: 0.75em;
-    
   }
-
 }
 @media (max-width: 580px) {
   img-caption {
@@ -245,7 +233,7 @@ justify-content: space-around;
     text-align: center;
   }
   .img-t {
-    margin:2px 2px 0 10px;
+    margin: 2px 2px 0 10px;
 
     flex-direction: column;
     align-items: flex-start;
@@ -262,8 +250,7 @@ justify-content: space-around;
     max-width: 25px;
     height: auto;
     margin-bottom: 0px;
-    display:flex;
-
+    display: flex;
   }
   .divic {
     margin-left: 0px;
@@ -277,48 +264,46 @@ justify-content: space-around;
   .div2 {
     grid-area: 2 / 1 / 5 / 8;
   }
-#heading{
-  font-size: 2em;
-  margin-top: 20px;
-}
+  #heading {
+    font-size: 2em;
+    margin-top: 20px;
+  }
 }
 @media (max-width: 420px) {
-  .div3{
+  .div3 {
     margin-top: 40px;
     margin-bottom: 0;
   }
-  .img-t{
+  .img-t {
     width: 40%;
   }
   .lb {
     font-size: 0.6em;
-  
   }
-  
+
   .img-caption {
     font-size: 0.6em;
   }
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.div5{
-  display:none;
+.div5 {
+  display: none;
   width: 100%;
   grid-area: 5 / 1 / 10 / 8;
   align-items: center;
-  justify-content:center
-  
+  justify-content: center;
 }
 
-#error{
+#error {
   font-size: 2em;
   text-align: center;
   width: 80%;
 }
-#error>a{
+#error > a {
   text-decoration: underline;
   color: #e8505b;
 }
