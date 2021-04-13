@@ -1,55 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vehicle Information</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <link rel="stylesheet" type="text/css" href="css.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="parent animate__animated ">
-            <div class="div1"> 
-                <div id=d11></div>
-                <div id=d12>  <h1 id=heading class="animate__animated animate__fadeInRight">Vehicle Registration</h1></div>          
-            </div>
-
-            <div class="div2 animate__animated animate__fadeIn"> 
-                
-                <img src="assets/home-img.png" id=home-main>
-            </div>
-
-            <div class="div3 animate__animated animate__fadeInRight">
-                <h1 id=h1-2>Enter Vehicle Registration Number</h1>
-                <div id=tb>
-                <form id='submitform' onsubmit="send()" action="page2.html" method="get" >
-                    <div id=d1>
-                        <input type="text" oninput="this.value = this.value.toUpperCase()" placeholder="MH 14 DH 56XX" name="name" maxlength="14" id=t1 pattern="^[A-Z]{2}\s[0-9]{1,2}\s[A-Z]{0,3}\s[0-9]{4}$" required>
-                    </div>   
-                    <div id=d2><button type="submit" id=b1 value="submit" >GO</button></div>
-                </form>
-            </div>
-
-            </div>
-            <div class="div4 animate__animated animate__fadeInRight">
-                <p id=p1>
-                    Get Details Like:
-                </p>
-                <div id=d41>
-                    <div class="img-t" id=it1> <img src="assets/owner name.png" class="grid-img"><p class="img-caption">Owner Name</p></div>
-                    <div class="img-t" id=it2> <img src="assets/model.png" class="grid-img"><p class="img-caption">Model</p></div>
-                    <div class="img-t" id=it3> <img src="assets/fuel.png" class="grid-img"><p class="img-caption">Fuel Type</p></div>
-                    <div class="img-t" id=it4> <img src="assets/r date.png" class="grid-img"><p class="img-caption">Registration Date</p></div>
-                    <div class="img-t" id=it5> <img src="assets/insurance.png" class="grid-img"><p class="img-caption">Insurance Validity</p></div>
-                    <div class="img-t" id=it6> <img src="assets/validity.png" class="grid-img"><p class="img-caption">Vehicle Validity</p></div>
-                    
-                </div>
-                <div id=etxt><p id=btxt> and much more...</p></div>
-            </div>
-            
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Information</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="parent animate__animated">
+      <div class="div1">
+        <div id="d11"></div>
+        <div id="d12">
+          <h1 id="heading" class="animate__animated animate__fadeInRight">
+            Vehicle Information
+          </h1>
         </div>
-        <script src="main.js"></script>
-    </body>
+      </div>
+
+      <div class="div2 animate__animated animate__fadeIn">
+        <img src="assets/home-img.png" id="home-main" />
+      </div>
+
+      <div class="div3 animate__animated animate__fadeInRight">
+        <h1 id="h1-2">Enter Vehicle Registration Number</h1>
+        <div id="tb">
+          <form
+            id="submitform"
+            onsubmit="send()"
+            action="page2.html"
+            method="get"
+          >
+            <div id="d1">
+              <input
+                type="text"
+                oninput="this.value = this.value.toUpperCase()"
+                placeholder="MH 14 DH 56XX"
+                name="name"
+                maxlength="14"
+                id="t1"
+                pattern="^[A-Z]{2}\s[0-9]{1,2}\s[A-Z]{0,3}\s[0-9]{4}$"
+                required
+              />
+            </div>
+            <div id="d2">
+              <button type="submit" id="b1" value="submit">GO</button>
+            </div></div>
+            <div id="category-box"> 
+                <label class="category-lb"><input type="radio" name="category" class="rd" value="vehicle_info" checked="checked" onchange="licenseplate_y()"> Vehicle Details</label>
+                <label class="category-lb"> <input type="radio" name="category" class="rd" value="fast_tag_info" onchange="licenseplate_y()"> Fast Tag Info</label>
+                <label class="category-lb"><input type="radio" name="category" class="rd" value="dl_info" onchange="licenseplate_n()"> Driving License Information </label>
+            </div>
+           
+          </form>
+        
+      </div>
+      <div class="div4 animate__animated animate__fadeInRight">
+        <p id="p1">Get Details Like:</p>
+        <div id="d41">
+          <div class="img-t" id="it1">
+            <img src="assets/owner name.png" class="grid-img" />
+            <p class="img-caption">Owner Name</p>
+          </div>
+          <div class="img-t" id="it2">
+            <img src="assets/model.png" class="grid-img" />
+            <p class="img-caption">Model</p>
+          </div>
+          <div class="img-t" id="it3">
+            <img src="assets/fuel.png" class="grid-img" />
+            <p class="img-caption">Fuel Type</p>
+          </div>
+          <div class="img-t" id="it4">
+            <img src="assets/r date.png" class="grid-img" />
+            <p class="img-caption">Registration Date</p>
+          </div>
+          <div class="img-t" id="it5">
+            <img src="assets/insurance.png" class="grid-img" />
+            <p class="img-caption">Insurance Validity</p>
+          </div>
+          <div class="img-t" id="it6">
+            <img src="assets/validity.png" class="grid-img" />
+            <p class="img-caption">Vehicle Validity</p>
+          </div>
+        </div>
+        <div id="etxt"><p id="btxt">and much more...</p></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

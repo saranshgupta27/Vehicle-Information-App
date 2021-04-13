@@ -162,6 +162,7 @@ html {
   max-width: 50px;
   width: 100%;
   margin: 0 auto 20px auto;
+  visibility: hidden;
 }
 .img-caption {
   text-align: left;
