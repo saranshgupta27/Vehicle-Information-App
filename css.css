@@ -89,6 +89,7 @@ form {
 }
 #category-box {
   margin-top: 40px;
+  /* width: 50%; */
 }
 .category-lb {
   margin-right: 5px;
@@ -159,8 +160,10 @@ form {
   align-items: center;
   justify-content: center;
   margin-top: auto;
+  z-index: 99;
 }
 .div4 {
+  z-index: 1;
   grid-area: 6 / 2 / 11 / 3;
   width: 40vw;
   height: 46vh;
@@ -268,6 +271,12 @@ form {
     width: 90vw;
     height: 22.5vh;
   }
+  .category-lb {
+    font-size: 1em;
+  }
+  #category-box {
+    margin-top: 10px;
+  }
   #heading {
     margin: 0;
     border-bottom: 2px solid #e8505b;
@@ -320,6 +329,7 @@ form {
     width: 90vw;
     height: 22.5vh;
     margin: 0;
+    margin-top: 20px;
   }
 }
 @media (max-width: 348px) {
@@ -338,6 +348,10 @@ form {
     min-height: 550px;
     overflow: hidden;
   }
+  .category-lb {
+    font-size: 0.8em;
+  }
+
   .div1 {
     min-height: 72px;
   }
@@ -347,16 +361,17 @@ form {
   .div3 {
     min-height: 80px;
   }
-  .div4 {
+  /* .div4 {
     min-height: 230px;
     overflow: hidden;
-  }
+  } */
 
   #h1-2 {
     display: none;
   }
   #p1 {
     font-size: 1.2em;
+    margin-top: 10px;
   }
 }
 
@@ -382,4 +397,10 @@ input:focus::-moz-placeholder {
 } /* FF 19+ */
 input:focus:-ms-input-placeholder {
   color: transparent;
+}
+
+@media (max-width: 420px) {
+  .category-lb {
+    font-size: 0.8em !important;
+  }
 }
