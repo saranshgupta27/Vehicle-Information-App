@@ -13,7 +13,7 @@ if (category != "dl_info") {
 console.log(a);
 
 function call_api(a, category) {
-  fetch(`https://apiclub.in/api/v1/${category}/${a}`, {
+  fetch(`https://api.apiclub.in/api/v1/${category}/${a}`, {
     method: "POST",
     headers: {
       "API-Key": "",
